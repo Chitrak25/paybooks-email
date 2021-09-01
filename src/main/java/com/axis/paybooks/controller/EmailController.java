@@ -21,6 +21,7 @@ import com.axis.paybooks.service.AwsSesService;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/access")
 public class EmailController {
+	
 
 	@Autowired
     AwsSesService awsSesService;
@@ -36,6 +37,10 @@ public class EmailController {
     	awsSesService.setSender(emailRequestDto.getFrom());
     	awsSesService.setSubject(emailRequestDto.getSubject());
     	
+    	System.out.println(emailRequestDto.getFrom());
+    	System.out.println(emailRequestDto.getSubject());
+    	System.out.println(emailRequestDto.getBody());
+    	System.out.println(emailRequestDto.getEmail());
     	
         try {
             awsSesService.sendEmail(emailRequestDto.getEmail(), emailRequestDto.getBody());
