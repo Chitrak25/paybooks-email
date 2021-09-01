@@ -50,7 +50,7 @@ public class AwsSesService {
 
 	@Autowired
     public AwsSesService(AmazonSimpleEmailService emailService,
-                         @Value("${email.sender}") String sender) {
+                         @Value("chitrakbari97@gmail.com") String sender) {
         this.emailService = emailService;
         this.sender = sender;
     }

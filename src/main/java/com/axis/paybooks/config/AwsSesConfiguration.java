@@ -14,7 +14,7 @@ public class AwsSesConfiguration {
 
     private final String region;
 
-    public AwsSesConfiguration(@Value("${email.region}") String region) {
+    public AwsSesConfiguration(@Value("ap-south-1") String region) {
         this.region = region;
     }
 
